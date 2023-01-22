@@ -7,6 +7,38 @@
     --topbar-height: 3rem;
 }
 
+/* -- colors ---------------------------------------------------------------- */
+
+:root {
+    --insipid-fg: #000;
+    --insipid-bg: #fff;
+
+    --insipid-topbar-bg: var(--insipid-bg);
+
+    --insipid-sidebar-bg: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --insipid-fg: rgba(255, 255, 255, 0.85);
+        /*--insipid-fg: #ddd;*/
+        /*--insipid-fg: #fafafa;*/
+        /*--insipid-fg: #ccc;*/
+        /*--insipid-fg: #f8f9fa;*/
+
+        --insipid-bg: #202326;
+        /*--insipid-bg: #2a2a2a;*/
+        /*--insipid-bg: #2f2f31;*/
+        /*--insipid-bg: #202124;*/
+
+        --insipid-sidebar-bg: #25282b;
+        /*--insipid-sidebar-bg: #1f1f1f;*/
+        /*--insipid-sidebar-bg: #272822;*/
+        /*--insipid-sidebar-bg: rgb(44, 51, 63);*/
+        /*--insipid-sidebar-bg: rgba(124,139,154,.13);*/
+    }
+}
+
 /* -- page layout ----------------------------------------------------------- */
 
 body {
@@ -14,8 +46,8 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     min-width: {{ theme_body_min_width|todim }};
-    color: #000;
-    background-color: #fff;
+    color: var(--insipid-fg);
+    background-color: var(--insipid-bg);
     text-size-adjust: none;
     -webkit-text-size-adjust: none;
 }
@@ -45,7 +77,7 @@ div.body {
 
 html::-webkit-scrollbar, div.sphinxsidebar::-webkit-scrollbar {
     width: 12px;
-    background-color: #fff;
+    background-color: var(--insipid-bg);
 }
 
 html::-webkit-scrollbar-thumb, div.sphinxsidebar::-webkit-scrollbar-thumb {
@@ -765,7 +797,7 @@ div.sphinxsidebar {
     padding-top: var(--topbar-height);
     z-index: 390;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: var(--insipid-sidebar-bg);
     overscroll-behavior: contain;
 }
 
@@ -972,11 +1004,11 @@ div.sphinxsidebar li.toctree-l10 {
 
 body:not(.js) div.sphinxsidebar li.current,
 div.sphinxsidebar .current-page:not(.logo) {
-    background-color: #fff;
+    background-color: var(--insipid-bg);
 }
 
 div.sphinxsidebar .current-page li:not(.current-page) {
-    background-color: #f5f5f5;
+    background-color: var(--insipid-sidebar-bg);
 }
 
 div.sphinxsidebar .current-page {
@@ -999,7 +1031,7 @@ div.sphinxsidebar input {
 
 #topbar {
     border-bottom: #ccc solid 1px;
-    background-color: #fff;
+    background-color: var(--insipid-topbar-bg);
 }
 
 #topbar,
@@ -1128,7 +1160,7 @@ body.scrolled #titlebar .top {
 /* cover nav-icon */
 div.body, .relbar, footer, div.articleComments {
     position: relative;
-    background-color: #fff;
+    background-color: var(--insipid-bg);
 }
 
 .nav-icon svg {
@@ -1155,7 +1187,7 @@ div.body, .relbar, footer, div.articleComments {
 }
 
 .nav-icon:hover {
-    color: #fff;
+    color: var(--insipid-bg);
     background-color: #f5f5f5;
 }
 
