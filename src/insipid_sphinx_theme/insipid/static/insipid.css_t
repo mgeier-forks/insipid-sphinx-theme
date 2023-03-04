@@ -259,6 +259,8 @@ section, .section {
 
 a {
     color: #1863b5;
+    /*color: #1a0dab;*/
+    /*color: #004188;*/
     text-decoration: none;
     overflow-wrap: break-word;
 }
@@ -268,7 +270,9 @@ a:hover {
 }
 
 a:visited {
-    color: #004188;
+    /*color: #004188;*/
+    /*color: #7a26a4;*/
+    color: #7a2cbb;
 }
 
 a.external {
@@ -897,6 +901,7 @@ div.sphinxsidebar ul ul {
 
 .sphinxsidebar a {
     color: #004188;
+    /*color: #1863b5;*/
 }
 
 div.sphinxsidebar a.in-view {
