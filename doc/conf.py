@@ -124,6 +124,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'sphinx_last_updated_by_git',
+    'sphinx_build_compatibility.extension',
 ]
 
 intersphinx_mapping = {

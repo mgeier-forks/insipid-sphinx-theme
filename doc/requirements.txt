@@ -1,1 +1,2 @@
 sphinx-last-updated-by-git
+git+https://github.com/readthedocs/sphinx-build-compatibility
